@@ -1,0 +1,146 @@
+echo "# GrupoBomja" >> README.md 
+git init 
+git add README.md 
+git commit -m "primeiro commit" 
+git remoto add origem git@github.com: AndreBomjardim / GrupoBomja.git
+ git push -u origem master
+#include <iostream>
+#include <locale.h>
+#include<iostream>
+#include<cstring>
+using namespace std;
+//-------------------------------
+	int menu(int via);
+	int verifVelocRural(int veloz);
+	int verifVelocUrbana(int veloz);
+//--------------------------------
+	int via;
+	int tipoV;
+	int leve;
+	int tipoRodovia;
+//------------------------------------------
+int verifVelocUrbana(int veloz){
+	int tipoRodovia;
+	system("cls"); 
+	
+	printf("\n\t\t ¨¨Informe o tipo de via¨¨  \n");
+	printf("\n 1 - Rodovias de trânsito rápido. ");
+	printf("\n 2 - Rodovias arteriais. ");
+	printf("\n 3 - Rodovias coletoras. ");
+	printf("\n 4 - Rodovias local. \n");
+	scanf("%d", &tipoRodovia);
+	system("cls"); 
+	printf("\n\t\t ¨¨Informe a velocidade [km/hr]¨¨  \n");
+	scanf("%d", &veloz);
+ 
+	if((veloz > 80) && (tipoRodovia == 1)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 80) && (tipoRodovia == 1)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n ", veloz);
+	}
+	if((veloz > 60) && (tipoRodovia == 2)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 60) && (tipoRodovia == 2)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n ", veloz);
+	}
+	if((veloz > 40) && (tipoRodovia == 3)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 40) && (tipoRodovia == 3)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n ", veloz);
+	}
+	if((veloz > 30) && (tipoRodovia == 4)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 30) && (tipoRodovia == 4)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n\n ", veloz);
+	}
+}
+//------------------------------
+int menu(int via){
+	system("cls"); 
+	int tipoVeiculo(int tipoCar);
+	int verifVelocUrbana(int veloz);
+	
+	printf("\n\t\t\t[1]– VIAS URBANAS:");
+	printf("\n\t\t\t[0]– VIAS RURAIS\n");
+	scanf("%d", &via);
+	system("cls"); 
+	if(via == 1){
+		verifVelocUrbana(tipoRodovia);
+	} 
+	if(via == 0){
+		tipoVeiculo(tipoV);	
+	}else if((via != 1) && (via != 0)){
+		printf("\nERROR\n");
+	}		
+}
+//------------------------------------------
+int verifVelocRural(int veloz){
+	int pequeno;
+	int tipoRodovia;
+	system("cls"); 
+	
+	printf("\n\t\t ¨¨Informe o tipo de Rodovia¨¨  \n");
+	printf("\n 1 - Rodovias de pista dupla. ");
+	printf("\n 2 - Rodovias de pista simples. ");
+	printf("\n 3 - Estradas. \n");
+	scanf("%d", &tipoRodovia);
+	system("cls"); 
+	printf("\n\t\t ¨¨Informe a velocidade [km/hr]¨¨  \n");
+	scanf("%d", &veloz);
+	
+	if((veloz > 110) && (tipoRodovia == 1)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 90) && (tipoRodovia == 1)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n ", veloz);
+	}
+	if((veloz > 100) && (tipoRodovia == 2)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 100) && (tipoRodovia == 2)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n ", veloz);
+	}
+	if((veloz > 60) && (tipoRodovia == 3)){
+		printf("\n\t\t [%d]km/h -->Você ultrapassou o limite de velocidade!\n\n ", veloz);
+	}else if ((veloz < 60) && (tipoRodovia == 3)){
+		printf("\n\t\t [%d]km/h -->Boa viagem : )!\n\n ", veloz);
+	}
+}
+//-----------------------------------
+int tipoVeiculo(int tipoCar){
+	system("cls"); 
+	int leve;
+	int pesado;
+	
+	if (via == 0){
+		printf("\n\t\t\t[1]– VEÍCULOS LEVES:");
+		printf("\n\t\t\t[2]– VEÍCULOS PESADOS\n");
+		scanf("%d", &tipoCar);
+		if(tipoCar == 1){
+			return verifVelocRural(leve);
+		}
+		if(tipoCar == 2){
+			return verifVelocRural(pesado);
+		}
+		
+	}
+}
+//----------------------------------------------------
+
+int main(int argc, char** argv) {
+	system("cls"); 
+	setlocale(LC_ALL, "");
+	system("color b");
+	int menu(int via);
+	int tipoVeiculo(int tipoCar);
+//------------------------------------------------------------
+
+	menu(via);
+	//tipoVeiculo(tipoV);
+ 	system("pause");  
+	return 0;
+}
+//----------------------------------------------------------------------------------
+
+
+
+
+
